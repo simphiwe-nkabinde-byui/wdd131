@@ -50,7 +50,7 @@ main {
     align-items: center;
     background: #fff;
     color: rgb(21, 21, 21);
-    width: 90vw;
+    max-width: 90vw;
     margin: 25px auto;
 }
 
