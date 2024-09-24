@@ -1,4 +1,4 @@
-/*color pallete: https://coolors.co/palette/f1faee-a8dadc-457b9d-1d3557 */
+/*color pallete: https://coolors.co/palette/f1faee-a8dadc-335975-1d3557 */
 body {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ h6 {
 }
 
 header {
-    background: #457B9D;
+    background: #335975;
 }
 
 header h1 {
@@ -64,7 +64,7 @@ section.card {
 
 section .card-head {
     text-align: center;
-    background: #457B9D;
+    background: #335975;
     margin: 0;
     padding: 10px 10px;
     color: #F1FAEE;
@@ -117,7 +117,7 @@ figcaption {
 }
 
 footer {
-    background: #457B9D;
+    background: #335975;
     text-align: center;
     padding: 15px;
 }
