@@ -76,8 +76,8 @@ section .card-body {
 }
 
 .about-me {
-    display: flex;
-    height: 150px;
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
 .about-country>h3 {
@@ -88,12 +88,20 @@ section .card-body {
 }
 
 .about-country-body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-country-body figure img {
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: .5rem;
 }
 
 
 .profile-picture {
-    height: 100%;
     border-radius: 5px;
 }
 
@@ -112,4 +120,25 @@ footer {
     background: #457B9D;
     text-align: center;
     padding: 15px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-row-gap: 25px;
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .about-country-body {
+        grid-template-columns: 1fr;
+    }
 }
