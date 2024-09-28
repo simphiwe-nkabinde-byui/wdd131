@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+    margin-top: 0;
+}
+
+header {
+    background: #673ab7;
+    position: relative;
+    color: #ededed;
+}
+
+header h1 {
+    margin: 0;
+    padding: .4rem .6rem;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: .3rem;
+    transition: 1s ease-in-out;
+}
+
+#menu-button::before {
+    content: "☰";
+    font-size: 1.5rem;
+}
+
+#menu-button.open::before {
+    content: "✕";
+    font-size: 1.5rem;
+}
+
+#header-navigation {
+    display: none;
+}
+
+#header-navigation.open {
+    background: #264653;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header-navigation>a {
+    padding: .5rem;
+    text-decoration: none;
+    color: #ededed;
+    width: 100%;
+    text-align: center;
+    transition: .1s ease-in-out;
+}
+
+#header-navigation>a:hover {
+    background: #365a68;
+}
+
+main {
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+main h2 {
+    color: #264653;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+    color: #264653;
+}
+
+figure img {
+    border-radius: .2rem;
+}
+
+footer {
+    background: #673ab7;
+    padding: .3rem .6rem;
+    text-align: center;
+    color: #ededed;
+    font-size: .8rem;
+}
