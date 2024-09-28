@@ -1,7 +1,6 @@
 :root {
     --color-primary: #673ab7;
     --color-secondary: #264653;
-    --color-secondary-light: #365a68;
     --color-white: #ededed;
 }
 
@@ -75,7 +74,7 @@ header h1 {
 }
 
 #header-navigation>a:hover {
-    background: var(--color-secondary-light);
+    background: rgba(255, 255, 255, 0.059);
 }
 
 main {
