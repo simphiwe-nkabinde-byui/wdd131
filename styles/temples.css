@@ -1,3 +1,10 @@
+:root {
+    --color-primary: #673ab7;
+    --color-secondary: #264653;
+    --color-secondary-light: #365a68;
+    --color-white: #ededed;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -15,9 +22,9 @@ h6 {
 }
 
 header {
-    background: #673ab7;
+    background: var(--color-primary);
     position: relative;
-    color: #ededed;
+    color: var(--color-white);
 }
 
 header h1 {
@@ -30,7 +37,7 @@ header h1 {
 #menu-button {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-white);
     position: absolute;
     right: 1rem;
     top: .3rem;
@@ -52,7 +59,7 @@ header h1 {
 }
 
 #header-navigation.open {
-    background: #264653;
+    background: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,14 +68,14 @@ header h1 {
 #header-navigation>a {
     padding: .5rem;
     text-decoration: none;
-    color: #ededed;
+    color: var(--color-white);
     width: 100%;
     text-align: center;
     transition: .1s ease-in-out;
 }
 
 #header-navigation>a:hover {
-    background: #365a68;
+    background: var(--color-secondary-light);
 }
 
 main {
@@ -78,7 +85,7 @@ main {
 }
 
 main h2 {
-    color: #264653;
+    color: var(--color-secondary);
 }
 
 .gallery-container {
@@ -90,7 +97,7 @@ main h2 {
 figure {
     margin: 0;
     text-align: center;
-    color: #264653;
+    color: var(--color-secondary);
 }
 
 figure img {
@@ -99,9 +106,9 @@ figure img {
 }
 
 footer {
-    background: #673ab7;
+    background: var(--color-primary);
     padding: .3rem .6rem;
     text-align: center;
-    color: #ededed;
+    color: var(--color-white);
     font-size: .8rem;
 }
