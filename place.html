@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data and Weather about Ghana">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Ghana</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ghana</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/ghana-large-1500.webp">
+                <source media="(min-width: 425px)" srcset="images/ghana-medium-768.webp">
+                <img src="images/ghana-small-425.webp" alt="Ghana" width="425" height="638">
+            </picture>
+        </div>
+        <section class="cards-section">
+            <div class="card">
+                <div class="card-head">
+                    <h2>Data</h2>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <h3>Area:</h3>
+                            <p>238,533 km²</p>
+                        </li>
+                        <li>
+                            <h3>Population:</h3>
+                            <p>34,614,137</p>
+                        </li>
+                        <li>
+                            <h3>Capital:</h3>
+                            <p>Accra</p>
+                        </li>
+                        <li>
+                            <h3>Official Language:</h3>
+                            <p>English</p>
+                        </li>
+                        <li>
+                            <h3>Other Languages</h3>
+                            <p>Twi, Ewe, Ga, Hausa</p>
+                        </li>
+                        <li>
+                            <h3>Currency:</h3>
+                            <p>Ghanaian Cedi (GH₵)</p>
+                        </li>
+                        <li>
+                            <h3>Time Zone:</h3>
+                            <p>Greenwich Mean Time</p>
+                        </li>
+                        <li>
+                            <h3>Calling Code:</h3>
+                            <p>+233</p>
+                        </li>
+                        <li>
+                            <h3>Internet TLD:</h3>
+                            <p>587,041 sq km</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-head">
+                    <h2 class="weather-title">Weather</h2>
+                    <img class="weather-icon" src="images/weather-icon.svg" alt="">
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <h3>Temeprature:</h3>
+                            <p>10 °C</p>
+                        </li>
+                        <li>
+                            <h3>Conditions:</h3>
+                            <p>Mostly cloudy</p>
+                        </li>
+                        <li>
+                            <h3>Wind:</h3>
+                            <p>5 km/h</p>
+                        </li>
+                        <li>
+                            <h3>Wind Chill:</h3>
+                            <p id="windchill">587,041 sq km</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Simphiwe Nkabinde | South Africa</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</body>
+
+</html>
