@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A form where users can review products">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Product Review Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get">
+
+            <label>
+                Product Name
+                <select name="productName" id="productName" required>
+                    <option value="" selected disabled>Select A product</option>
+                </select>
+            </label>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label><input type="radio" name="rating" value="1" id="rating-1" required>⭐︎</label>
+                <label><input type="radio" name="rating" value="2" id="rating-2" required>⭐︎ ⭐︎</label>
+                <label><input type="radio" name="rating" value="3" id="rating-3" required>⭐︎ ⭐︎ ⭐︎</label>
+                <label><input type="radio" name="rating" value="4" id="rating-4" required>⭐︎ ⭐︎ ⭐︎ ⭐︎</label>
+                <label><input type="radio" name="rating" value="5" id="rating-5" required>⭐︎ ⭐︎ ⭐︎ ⭐︎ ⭐︎</label>
+            </fieldset>
+
+            <label>Date of Installation <input type="date" name="installDate" id="installDate" required></label>
+
+            <fieldset>
+                <legend>Which feature did you find useful in the product?</legend>
+                <em>(check all that apply)</em>
+                <label><input type="checkbox" name="durability" id="feature-durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="easeOfUse" id="ease-of-use" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="performance" id="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" id="design" value="yes">Design</label>
+            </fieldset>
+
+            <label>
+                Written Review (optional)
+                <textarea name="writtenReview" id="written-review"></textarea>
+            </label>
+
+            <label>Your Name (optional) <input type="text" id="username" name="username"></label>
+
+            <input type="submit" value="Post review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Simphiwe Nkabinde | South Africa</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
