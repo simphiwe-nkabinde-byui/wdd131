@@ -6,10 +6,19 @@
 }
 
 body {
-    font-family: sans-serif;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    font-family: "Nunito", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
 }
 
 header {
