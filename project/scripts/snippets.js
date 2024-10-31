@@ -52,7 +52,7 @@ if (container) {
         modalBody.textContent = item.body
         modalImage.innerHTML = `
             <source media="(min-width: 425px)" srcset="images/${item.imageName}-lg.webp">
-            <img src="images/${item.imageName}-sm.webp" alt="${item.imageName}" width="300" height="200">
+            <img loading="lazy" src="images/${item.imageName}-sm.webp" alt="${item.imageName}" width="300" height="200">
         `
         modalBackdrop.classList.add("show")
     }
@@ -70,7 +70,7 @@ if (container) {
         picture.innerHTML =`
             <source media="(min-width: 768px)" srcset="images/${item.imageName}-sm.webp">
             <source media="(min-width: 425px)" srcset="images/${item.imageName}-lg.webp">
-            <img src="images/${item.imageName}-sm.webp" alt="${item.imageName}" width="300" height="200">
+            <img loading="lazy" src="images/${item.imageName}-sm.webp" alt="${item.imageName}" width="300" height="200">
         `
         picture.className = "card-image"
     
