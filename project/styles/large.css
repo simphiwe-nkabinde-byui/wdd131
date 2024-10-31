@@ -1,0 +1,37 @@
+:root {
+    --color-body: #222222;
+    --color-heading: #2b3b00;
+    --color-accent: #eb4200;
+    --color-background: #f4f0e9;
+}
+
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .8rem 10%;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    #header-navigation,
+    #header-navigation.open {
+        flex-direction: row;
+        column-gap: 3rem;
+        background: none;
+        position: static;
+        height: auto;
+        width: auto;
+        animation: none;
+    }
+
+    #header-navigation>a {
+        color: var(--color-background);
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+}

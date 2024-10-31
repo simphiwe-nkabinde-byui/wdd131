@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="informative content that promotes healthy living">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <title>Welcome | Healthy Living Snippets</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="brand">Healthy Living Snippets</a>
+        <button id="menu-button" aria-expanded="false" aria-label="Toggle navigation" aria-controls="header-navigation"
+            type="button"></button>
+        <nav id="header-navigation">
+            <a href="snippets.html">Snippets</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 750px)" srcset="images/hero-lg.webp">
+                <source media="(min-width: 425px)" srcset="images/hero-md.webp">
+                <img src="images/hero-sm.webp" alt="Ghana" width="425" height="638">
+            </picture>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="text-accent">Welcome to Healthy Living Snippets</h1>
+                <p class="text-background">
+                    We share health-related Snippets that promote a healthy Living</p>
+            </div>
+        </section>
+
+        <section class="contact-sect">
+            <p class="text-align-center">
+                Checkout our health tip snippets on the <a href="snippets.html">Snippets Page</a>.
+                We would love to here from you. Let us know what you think and if there's any
+                health tips you'd like us to add to our list
+            </p>
+            <form class="contact-form" action="submission-confirmation.html" method="get">
+                <label>
+                    Name*
+                    <input required placeholder="john doe" type="text" name="username" id="username"></label>
+                <label>
+                    Subject*
+                    <input required placeholder="the subject of your message" type="text" name="subject"
+                        id="subject"></label>
+                <label>
+                    Message*
+                    <textarea required name="message" id="messsage" placeholder="type your message here"></textarea>
+                </label>
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Healthy Living Snippets</p>
+    </footer>
+    <script src="/scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js"></script>
+</body>
+
+</html>

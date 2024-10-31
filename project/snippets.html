@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="informative content that promotes healthy living">
+    <meta name="author" content="Simphiwe Nkabinde">
+    <title>Welcome | Healthy Living Snippets</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="brand">Healthy Living Snippets</a>
+        <button id="menu-button" aria-expanded="false" aria-label="Toggle navigation" aria-controls="header-navigation"
+            type="button"></button>
+        <nav id="header-navigation">
+            <a href="snippets.html" class="active">Snippets</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main class="main-snippets">
+        <section class="header-sect">
+            <h1>Snippets</h1>
+            <p>Here are some of our health tip snippets to inspire healthy habits</p>
+            <p>Click on a Snippet to get more info</p>
+        </section>
+
+        <div id="snippets-container">
+
+        </div>
+        <div id="modal-backdrop">
+            <div class="modal">
+                <h2 class="modal-title">No title</h2>
+                <picture class="modal-image">
+                    <img src="images/color-to-plate-lg.webp" alt="color plate">
+                </picture>
+                <p class="modal-body"></p>
+                <button autofocus type="button" class="modal-close">close</button>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Healthy Living Snippets</p>
+    </footer>
+    <script src="/scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/snippets.js"></script>
+</body>
+
+</html>

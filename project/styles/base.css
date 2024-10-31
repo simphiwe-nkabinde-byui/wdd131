@@ -1,0 +1,366 @@
+:root {
+    --color-body: #222222;
+    --color-heading: #2b3b00;
+    --color-accent: #eb4200;
+    --color-background: #f4f0e9;
+}
+
+body {
+    color: var(--color-body);
+    background-color: var(--color-background);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+}
+
+.bg-body {
+    background-color: var(--color-body);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-heading {
+    background-color: var(--color-heading);
+}
+
+.bg-background {
+    background-color: var(--color-background);
+}
+
+.text-body {
+    color: var(--color-body);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-heading {
+    color: var(--color-heading);
+}
+
+.text-background {
+    color: var(--color-background);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+/* ----------------- HEADER ----------------- */
+header {
+    background-color: var(--color-heading);
+    padding: .6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 1rem;
+    border-bottom: 1.5px solid var(--color-accent);
+}
+
+header .brand {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-background);
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    z-index: 5;
+}
+
+#menu-button::before {
+    content: "☰";
+    font-size: 1.5rem;
+    color: var(--color-background);
+}
+
+#menu-button.open::before {
+    content: "✕";
+    font-size: 1.5rem;
+    color: var(--color-heading);
+}
+
+#header-navigation {
+    display: flex;
+    background: #f4f0e9ee;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    z-index: 4;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideOut .3s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100vw;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        width: 100vw;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+#header-navigation.open {
+    animation: slideIn .5s ease-in-out;
+    width: 100vw;
+}
+
+#header-navigation>a {
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--color-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+#header-navigation>a:hover {
+    background: rgba(255, 255, 255, 0.059);
+}
+
+#header-navigation>a.active {
+    color: var(--color-accent);
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    height: 350px;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #3e3e3e7f;
+}
+
+/* ----------------- FOOTER ----------------- */
+footer {
+    background-color: var(--color-heading);
+    padding: .5rem;
+    font-size: .9rem;
+    text-align: center;
+    color: var(--color-background);
+}
+
+/* ----------------- MAIN PAGE ----------------- */
+.main-about {
+    text-align: center;
+    width: 400px;
+    max-width: 90vw;
+    margin: 3rem auto;
+}
+
+.main-about h1 {
+    margin-bottom: 2rem;
+}
+
+.main-about p {
+    margin-bottom: 1rem;
+}
+
+/* ----------------- SNIPPETS PAGE ----------------- */
+.main-snippets {
+    max-width: 90vw;
+    margin: 2rem auto;
+
+}
+
+.main-snippets .header-sect {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#snippets-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .3rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    border: 1px solid var(--color-accent);
+    opacity: 0.9;
+}
+
+.card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a91;
+}
+
+.card-title {
+    position: relative;
+    color: var(--color-background);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-body {
+    font-size: .9rem;
+    position: relative;
+    color: var(--color-background);
+}
+
+.modal {
+    width: 450px;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-top: 15vh;
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    background: var(--color-background);
+    max-height: 70vh;
+    /* overflow: scroll; */
+    border: 1px solid rgb(174, 174, 174);
+    padding: 1.5rem;
+}
+
+#modal-backdrop {
+    display: none;
+    background: #00000056;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 10;
+}
+
+#modal-backdrop.show {
+    display: block;
+
+}
+
+.modal-body {
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.modal-image img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .2rem;
+}
+
+.modal-close {
+    cursor: pointer;
+    background: var(--color-heading);
+    color: var(--color-background);
+    border: none;
+    border-radius: .3rem;
+    margin: 0 auto;
+    padding: .3rem 2rem;
+}
+
+/* ----------------- CONTACT FORM ----------------- */
+.contact-sect {
+    margin: 3rem auto;
+    max-width: 90vw;
+}
+
+.contact-form {
+    border-radius: 6px;
+    width: 400px;
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    border: 1px solid #dadada;
+    border-radius: .2rem;
+    width: 100%;
+    padding: .4rem;
+    font-size: 1rem;
+}
+
+.contact-form input[type="submit"] {
+    background: var(--color-accent);
+    color: var(--color-background);
+    border: none;
+}
